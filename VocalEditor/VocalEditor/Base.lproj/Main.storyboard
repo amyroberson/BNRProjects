@@ -683,11 +683,11 @@
             <objects>
                 <viewController id="5gI-5U-AMq" customClass="ViewController" customModule="VocalEditor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="ERx-hH-rdd">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="553"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oCB-pk-MvO">
-                                <rect key="frame" x="388" y="222" width="78" height="32"/>
+                                <rect key="frame" x="388" y="505" width="78" height="32"/>
                                 <buttonCell key="cell" type="push" title="Speak" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="csv-wF-Wh8">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -697,7 +697,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a5w-Fo-dVs">
-                                <rect key="frame" x="308" y="222" width="69" height="32"/>
+                                <rect key="frame" x="308" y="505" width="69" height="32"/>
                                 <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bYT-CD-G0v">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -707,16 +707,16 @@
                                 </connections>
                             </button>
                             <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tng-2f-NIW">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="209"/>
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="492"/>
                                 <clipView key="contentView" id="q8l-9r-lUv">
-                                    <rect key="frame" x="1" y="1" width="478" height="207"/>
+                                    <rect key="frame" x="1" y="1" width="478" height="490"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="egz-hf-fdv">
-                                            <rect key="frame" x="0.0" y="0.0" width="478" height="207"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="478" height="490"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="478" height="207"/>
+                                            <size key="minSize" width="478" height="490"/>
                                             <size key="maxSize" width="507" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
@@ -727,17 +727,26 @@
                                     <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="h6S-IL-JEo">
-                                    <rect key="frame" x="463" y="1" width="16" height="207"/>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="h6S-IL-JEo">
+                                    <rect key="frame" x="463" y="1" width="16" height="490"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <progressIndicator wantsLayer="YES" maxValue="100" indeterminate="YES" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="zHE-SH-wIt">
+                                <rect key="frame" x="140" y="19" width="200" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="6SS-4K-CNF"/>
+                                    <constraint firstAttribute="height" constant="20" id="bZ0-oy-Vvt"/>
+                                </constraints>
+                            </progressIndicator>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Tng-2f-NIW" secondAttribute="trailing" id="0b9-Lj-fII"/>
                             <constraint firstItem="Tng-2f-NIW" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" id="5wh-nc-vvm"/>
                             <constraint firstItem="a5w-Fo-dVs" firstAttribute="baseline" secondItem="oCB-pk-MvO" secondAttribute="baseline" id="9MO-Ek-cY8"/>
+                            <constraint firstAttribute="bottom" secondItem="zHE-SH-wIt" secondAttribute="bottom" constant="20" symbolic="YES" id="MRS-Ls-N1e"/>
                             <constraint firstItem="oCB-pk-MvO" firstAttribute="leading" secondItem="a5w-Fo-dVs" secondAttribute="trailing" constant="23" id="Pkj-Fz-cEe"/>
+                            <constraint firstItem="zHE-SH-wIt" firstAttribute="centerX" secondItem="ERx-hH-rdd" secondAttribute="centerX" id="Qfx-nJ-uoZ"/>
                             <constraint firstAttribute="bottom" secondItem="Tng-2f-NIW" secondAttribute="bottom" id="Wwm-IO-gUb"/>
                             <constraint firstItem="Tng-2f-NIW" firstAttribute="top" secondItem="oCB-pk-MvO" secondAttribute="bottom" constant="20" id="bdz-3O-6R1"/>
                             <constraint firstAttribute="trailing" secondItem="oCB-pk-MvO" secondAttribute="trailing" constant="20" id="has-iM-SaB"/>
@@ -745,12 +754,15 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="progressBar" destination="zHE-SH-wIt" id="VLG-1p-pVV"/>
+                        <outlet property="speakButton" destination="oCB-pk-MvO" id="DbZ-eH-QbJ"/>
+                        <outlet property="stopButtton" destination="a5w-Fo-dVs" id="jYc-AN-men"/>
                         <outlet property="textView" destination="egz-hf-fdv" id="nt8-ec-Cmr"/>
                     </connections>
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="898.5"/>
         </scene>
     </scenes>
 </document>

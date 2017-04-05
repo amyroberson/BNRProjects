@@ -24,31 +24,45 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate {
     @IBOutlet var textView: NSTextView!
     @IBOutlet var speakButton: NSButton!
     @IBOutlet var stopButtton: NSButton!
+    @IBOutlet var progressBar: NSProgressIndicator!
     
+    override func loadView(){
+        super.loadView()
+        speechSynthesizer.delegate = self
+        speakButton.isEnabled = true
+        stopButtton.isEnabled = false
+        progressBar.isHidden = true
+    }
     
     @IBAction func speakButtonClicked(_ sender: NSButton) {
-
-            if let contents = textView.string, !contents.isEmpty {
-                speechSynthesizer.startSpeaking(contents)
-            } else {
-                speechSynthesizer.startSpeaking("This Document is empty.")
-            }
         
+        if let contents = textView.string, !contents.isEmpty {
+            speechSynthesizer.startSpeaking(contents)
+        } else {
+            speechSynthesizer.startSpeaking("This Document is empty.")
+        }
+        speakButton.isEnabled = false
+        stopButtton.isEnabled = true
+        progressBar.isHidden = false
+        progressBar.increment(by: 5.0)
+        progressBar.minValue = 0.0
+        progressBar.maxValue = 100.0
+        progressBar.startAnimation(sender)
+    
     }
     
     
     @IBAction func stopButtonClickerd(_ sender: NSButton) {
         speechSynthesizer.stopSpeaking()
+        progressBar.stopAnimation(sender)
+        progressBar.isHidden = true
     }
     
     func speechSynthesizer(_ sender: NSSpeechSynthesizer, didFinishSpeaking finishedSpeaking: Bool) {
-        if !finishedSpeaking{
-            speakButton.isEnabled = false
-            stopButtton.isEnabled = true
-        } else {
-            speakButton.isEnabled = true
-            stopButtton.isEnabled = false
-        }
+        
+        speakButton.isEnabled = true
+        stopButtton.isEnabled = false
+        progressBar.isHidden = true
     }
 }
 
