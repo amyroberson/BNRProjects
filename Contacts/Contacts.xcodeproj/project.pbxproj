@@ -14,6 +14,7 @@
 		E1BF84B71E9C26F0005EE89B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1BF84B61E9C26F0005EE89B /* Assets.xcassets */; };
 		E1BF84BA1E9C26F0005EE89B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1BF84B81E9C26F0005EE89B /* LaunchScreen.storyboard */; };
 		E1BF84C31E9C6037005EE89B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF84C21E9C6037005EE89B /* Contact.swift */; };
+		E1BF84C51E9E6427005EE89B /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF84C41E9E6427005EE89B /* NewContactViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		E1BF84BB1E9C26F0005EE89B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1BF84C11E9C6036005EE89B /* Contacts-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Contacts-Bridging-Header.h"; sourceTree = "<group>"; };
 		E1BF84C21E9C6037005EE89B /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		E1BF84C41E9E6427005EE89B /* NewContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				E1BF84B01E9C26F0005EE89B /* ContactsViewController.h */,
 				E1BF84B11E9C26F0005EE89B /* ContactsViewController.m */,
 				E1BF84B31E9C26F0005EE89B /* Main.storyboard */,
+				E1BF84C41E9E6427005EE89B /* NewContactViewController.swift */,
 				E1BF84C21E9C6037005EE89B /* Contact.swift */,
 				E1BF84B61E9C26F0005EE89B /* Assets.xcassets */,
 				E1BF84B81E9C26F0005EE89B /* LaunchScreen.storyboard */,
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1BF84C31E9C6037005EE89B /* Contact.swift in Sources */,
+				E1BF84C51E9E6427005EE89B /* NewContactViewController.swift in Sources */,
 				E1BF84B21E9C26F0005EE89B /* ContactsViewController.m in Sources */,
 				E1BF84AF1E9C26F0005EE89B /* AppDelegate.m in Sources */,
 				E1BF84AC1E9C26F0005EE89B /* main.m in Sources */,
@@ -324,6 +328,7 @@
 				E1BF84C01E9C26F0005EE89B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

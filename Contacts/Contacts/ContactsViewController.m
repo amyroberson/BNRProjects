@@ -20,10 +20,8 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder: aDecoder];
     if (self) {
-        NSArray *contactArray = @[@"Johnny Appleseed",
-                                  @"Paul Bunyan",
-                                  @"John Smith"];
-        _contacts =[NSMutableArray arrayWithArray: contactArray];
+        
+        _contacts =[NSMutableArray array];
     }
     return self;
 }
@@ -47,9 +45,14 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
-    NSString *contact = self.contacts[indexPath.row];
-    cell.textLabel.text = contact;
+    Contact *contact = self.contacts[indexPath.row];
+    cell.textLabel.text = contact.name;
     return cell;
+}
+
+-(IBAction)cancelToContactsViewController:(UIStoryboardSegue *)segue
+{
+    // code
 }
 
 
