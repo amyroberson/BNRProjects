@@ -52,9 +52,21 @@
 
 -(IBAction)cancelToContactsViewController:(UIStoryboardSegue *)segue
 {
-    // code
+    // takes no action when cancel is pressed
 }
 
+-(IBAction)createNewContact: (UIStoryboardSegue *)seque
+{
+    NewContactViewController *newContactVC = seque.sourceViewController;
+    NSString *firstname = newContactVC.firstNameTextField.text;
+    NSString *lastname = newContactVC.LastNameTextField.text;
+    if (firstname.length != 0 || lastname.length != 0) {
+        NSString *name = [NSString stringWithFormat:@"%@ %@", firstname, lastname];
+        Contact *newContact = [[Contact alloc] initWithName:name];
+        [self.contacts addObject: newContact];
+        [self.tableView reloadData];
+    }
+}
 
 
 @end

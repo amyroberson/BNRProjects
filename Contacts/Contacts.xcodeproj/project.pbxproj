@@ -15,6 +15,7 @@
 		E1BF84BA1E9C26F0005EE89B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1BF84B81E9C26F0005EE89B /* LaunchScreen.storyboard */; };
 		E1BF84C31E9C6037005EE89B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF84C21E9C6037005EE89B /* Contact.swift */; };
 		E1BF84C51E9E6427005EE89B /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF84C41E9E6427005EE89B /* NewContactViewController.swift */; };
+		E1BF84C81E9E9A60005EE89B /* ImageFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E1BF84C71E9E9A60005EE89B /* ImageFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		E1BF84C11E9C6036005EE89B /* Contacts-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Contacts-Bridging-Header.h"; sourceTree = "<group>"; };
 		E1BF84C21E9C6037005EE89B /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		E1BF84C41E9E6427005EE89B /* NewContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContactViewController.swift; sourceTree = "<group>"; };
+		E1BF84C61E9E9A60005EE89B /* ImageFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageFactory.h; sourceTree = "<group>"; };
+		E1BF84C71E9E9A60005EE89B /* ImageFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 				E1BF84AD1E9C26F0005EE89B /* AppDelegate.h */,
 				E1BF84AE1E9C26F0005EE89B /* AppDelegate.m */,
 				E1BF84B01E9C26F0005EE89B /* ContactsViewController.h */,
+				E1BF84C61E9E9A60005EE89B /* ImageFactory.h */,
+				E1BF84C71E9E9A60005EE89B /* ImageFactory.m */,
 				E1BF84B11E9C26F0005EE89B /* ContactsViewController.m */,
 				E1BF84B31E9C26F0005EE89B /* Main.storyboard */,
 				E1BF84C41E9E6427005EE89B /* NewContactViewController.swift */,
@@ -160,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1BF84C81E9E9A60005EE89B /* ImageFactory.m in Sources */,
 				E1BF84C31E9C6037005EE89B /* Contact.swift in Sources */,
 				E1BF84C51E9E6427005EE89B /* NewContactViewController.swift in Sources */,
 				E1BF84B21E9C26F0005EE89B /* ContactsViewController.m in Sources */,

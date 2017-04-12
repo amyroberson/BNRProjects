@@ -69,6 +69,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tYp-h7-tFU">
+                                <rect key="frame" x="67.5" y="213.5" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="JCU-Wt-2gc"/>
+                                    <constraint firstAttribute="height" constant="240" id="SXU-WS-CSJ"/>
+                                </constraints>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l4B-gN-xKR">
                                 <rect key="frame" x="128" y="72" width="222" height="30"/>
                                 <constraints>
@@ -81,6 +88,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="tYp-h7-tFU" firstAttribute="centerY" secondItem="jM3-wh-Ar1" secondAttribute="centerY" id="Ukd-u9-sco"/>
+                            <constraint firstItem="tYp-h7-tFU" firstAttribute="centerX" secondItem="jM3-wh-Ar1" secondAttribute="centerX" id="ZmE-Ct-oGd"/>
                             <constraint firstItem="do8-wX-uUo" firstAttribute="top" secondItem="WDh-mf-kO3" secondAttribute="bottom" constant="23" id="ett-1K-plY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="l4B-gN-xKR" secondAttribute="trailing" constant="9" id="fEi-P2-M3t"/>
                             <constraint firstItem="do8-wX-uUo" firstAttribute="centerX" secondItem="WDh-mf-kO3" secondAttribute="centerX" id="hpw-ov-6DO"/>
@@ -97,10 +106,15 @@
                                 <segue destination="zGm-Oj-c10" kind="unwind" unwindAction="cancelToContactsViewController:" id="zJJ-Vj-DKD"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="zka-kb-qHK"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="zka-kb-qHK">
+                            <connections>
+                                <segue destination="zGm-Oj-c10" kind="unwind" unwindAction="createNewContact:" id="sgL-M7-MFo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="LastNameTextField" destination="En4-8P-Pos" id="wvg-Z9-ke7"/>
+                        <outlet property="contactImageView" destination="tYp-h7-tFU" id="QVc-ZM-gVR"/>
                         <outlet property="firstNameTextField" destination="l4B-gN-xKR" id="MfB-s6-p7X"/>
                     </connections>
                 </viewController>
